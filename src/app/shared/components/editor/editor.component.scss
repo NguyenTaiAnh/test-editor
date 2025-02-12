@@ -1,0 +1,9 @@
+:host ::ng-deep .ck-editor__editable_inline {
+	min-height: 400px;
+}
+
+// 圖片拉進去 馬上縮小
+::ng-deep figure:not(.image_resized) {
+	width: 20%;
+	height: auto;
+}

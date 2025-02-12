@@ -13,3 +13,10 @@
         <button class="task-delete">Delete</button>
     </div>
 </div>
+
+<h1>
+  hello
+</h1>
+<app-editor [data]="editorData"></app-editor>
+
+<div class="ck-content view-content" [innerHTML]="editorData.content | htmlTransform"></div>

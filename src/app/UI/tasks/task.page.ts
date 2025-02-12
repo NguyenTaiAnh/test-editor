@@ -1,19 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BaseComponent } from '@app/shared/base/base.componet';
 import { Subscription } from 'rxjs';
 import {FormsModule, NgForm} from '@angular/forms';
+import { EditorComponent } from '@app/shared/components/editor/editor.component';
+import { SharedModule } from '@app/shared/modules/shared.module';
 
 @Component({
     selector: 'app-task',
     templateUrl: './task.page.html',
     styleUrls: ['./task.page.scss'],
     standalone:true,
-    imports:[CommonModule, FormsModule]
+    imports: [CommonModule, FormsModule, SharedModule]
 })
 export class TaskPage extends BaseComponent {
+    @ViewChild(EditorComponent) editor!: EditorComponent;
 
     tasks: Array<{ title: string, completed: boolean }> = [];
+    editorData = { content: '' };
 
     onsubmit(test: NgForm){
       console.log({test: test.value});

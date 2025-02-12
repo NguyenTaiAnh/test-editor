@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": "src", // This must be specified if "paths" is.
     "paths": {
         "@app/*": ["app/*"],
@@ -15,7 +16,8 @@
         "@interfaces/*": ["app/interfaces/*"],
         "@services/*": ["app/services/*"],
         "@utils/*": ["app/utils/*"],
-        "@UI/*": ["app/UI/*"]
+        "@UI/*": ["app/UI/*"],
+        "@assets/*":["assets/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
@@ -33,6 +35,7 @@
     "module": "ES2022"
   },
   "angularCompilerOptions": {
+    "enableIvy": false,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
