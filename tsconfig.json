@@ -3,6 +3,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src", // This must be specified if "paths" is.
+    "paths": {
+        "@app/*": ["app/*"],
+        "@env/*": ["env/*"],
+        "@routes/*": ["routes/*"],
+        "@components/*": ["app/components/*"],
+        "@constants/*": ["app/constants/*"],
+        "@shared/*": ["app/shared/*"],
+        "@core/*": ["app/core/*"],
+        "@interfaces/*": ["app/interfaces/*"],
+        "@services/*": ["app/services/*"],
+        "@utils/*": ["app/utils/*"],
+        "@UI/*": ["app/UI/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

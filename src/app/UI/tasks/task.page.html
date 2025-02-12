@@ -1,0 +1,15 @@
+
+<form #form="ngForm" (ngSubmit)="onsubmit(form)" >
+  <input class="bg-amber-400 rounded-3xl border-2 border-amber-950 p-4" type="text" name="name" ngModel required>
+  <button type="submit">Submit</button>
+</form>
+
+
+<div class="task bg-red-400">
+    <h2 class="task-title">Task Title</h2>
+    <p class="task-description">Task description goes here...</p>
+    <div class="task-actions">
+        <button class="task-complete">Complete</button>
+        <button class="task-delete">Delete</button>
+    </div>
+</div>
