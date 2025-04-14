@@ -4,13 +4,16 @@
   [formGroup]="mainMatForm"
   (ngSubmit)="onMainMatFormNgSubmit($event)"
 >
-  <ckeditor
+
+<textarea id="editor" name="editor"></textarea>
+
+  <!-- <ckeditor
     name="ckeditor_text"
     formControlName="ckeditor_text"
     editorUrl="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"
     [config]="ckEditorConfig"
     (ready)="onCkEditorReady($event)"
-  ></ckeditor>
+  ></ckeditor> -->
 </form>
 <div>{{ ckeditorTextFormElement?.value }}</div>
 <div>{{ availablePlugins }}</div>

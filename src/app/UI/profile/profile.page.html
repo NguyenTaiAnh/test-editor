@@ -16,7 +16,11 @@
     </section>
 </main>
 <form [formGroup]="form" (ngSubmit)="onsubmit()"   >
-  <input type="text" class="border-2 border-amber-950" formControlName="username" required>
+  <textarea id="editor"></textarea>
+  <div id="jodit-editor"></div>
+
+  <!-- <input type="text" class="border-2 border-amber-950" formControlName="username" required> -->
+
   <button type="submit">submit</button>
 </form>
 
@@ -31,3 +35,5 @@
   <button (click)="addItem()">click add item name</button>
 </form>
 
+<button (click)="incr()">Click Me</button>
+             <p>Count: {{ count }}</p>
